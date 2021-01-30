@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -15,21 +16,32 @@ public class loginController {
 
     public TextField name;
     public TextField password;
+    public Label statusLabel;
 
 
 
     @FXML
     public void changeScreenButtonPushed(ActionEvent event) throws IOException {
+
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene mainMenuScene = new Scene(tableViewParent);
 
         //This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        window.setScene(mainMenuScene);
-        window.show();
 
+
+        if (name.getText().equals("user") && password.getText().equals("pass")){
+            window.setScene(mainMenuScene);
+            window.show();
+        }
+
+        else {
+            statusLabel.setVisible(true);
+            statusLabel.setText("Incorrect username or password.");
+        }
     }
+
 
 
 }
