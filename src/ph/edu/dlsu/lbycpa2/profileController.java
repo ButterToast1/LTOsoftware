@@ -10,17 +10,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Controller {
-
+public class profileController {
 
     @FXML
     public void changeScreenButtonPushed(ActionEvent event) throws IOException {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
         //This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+        window.setScene(tableViewScene);
+        window.show();
     }
-
 }
