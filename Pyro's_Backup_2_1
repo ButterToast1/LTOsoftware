@@ -1,0 +1,108 @@
+package sample;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+    Button buttonBack,buttonBack1,buttonBack2,buttonBack3,buttonBack4,button1,button2,button3,button4,button5,button6;
+    Scene scene1,scene2,scene3,scene4,scene5;
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage window) throws Exception {
+        //buttons
+        button1 = new Button();
+        button1.setText("Login");
+        button2 = new Button();
+        button2.setText("Sign Up");
+
+        //Lambda for buttons
+        button1.setOnAction(e -> window.setScene(scene2));
+        button2.setOnAction(e -> window.setScene(scene2));
+
+        //Labels
+        Label label1 = new Label("Welcome");
+        Label label2 = new Label("Username:");
+        Label label3 = new Label("Password:");
+
+        //First layout
+        VBox layout = new VBox(10);
+        layout.getChildren().addAll(label1,label2,label3,button1,button2);
+        scene1 = new Scene(layout, 300, 300);
+
+        //Second layout -- Main Menu
+        Label label4 = new Label("Main Menu");
+        Label label5 = new Label("LTOsoftware");
+
+        button3 = new Button();
+        button3.setText("Log out");
+        button3.setOnAction(e -> window.setScene(scene1));
+
+        button4 = new Button();
+        button4.setText("Profile");
+        button4.setOnAction(e -> window.setScene(scene3));
+
+        button5 = new Button();
+        button5.setText("License Registration");
+        button5.setOnAction(e -> window.setScene(scene4));
+
+        button6 = new Button();
+        button6.setText("Review Payment and Checkout");
+        button6.setOnAction(e -> window.setScene(scene5));
+
+        //back to main menu
+        buttonBack = new Button();
+        buttonBack.setText("Back to Menu");
+        buttonBack.setOnAction(e -> window.setScene(scene2));
+
+        VBox layout2 = new VBox(10);
+        layout2.getChildren().addAll(label4,label5,button4,button5,button6,button3);
+        scene2 = new Scene(layout2,300,300);
+
+        //Third layout -- Profile
+        buttonBack1 = new Button();
+        buttonBack1.setText("Back to Menu");
+        buttonBack1.setOnAction(e -> window.setScene(scene2));
+        Label label6 = new Label("Profile");
+        VBox layout3 = new VBox(10);
+        layout3.getChildren().addAll(label6,buttonBack1);
+        scene3 = new Scene(layout3, 300,300);
+
+        //Fourth layout -- License Registration
+        buttonBack2 = new Button();
+        buttonBack2.setText("Back to Menu");
+        buttonBack2.setOnAction(e -> window.setScene(scene2));
+        Label label7 = new Label("License Registration");
+        VBox layout4 = new VBox(10);
+        layout4.getChildren().addAll(label7,buttonBack2);
+        scene4 = new Scene(layout4, 300,300);
+
+        //Fifth layout -- Review Payment and Checkout
+        buttonBack3 = new Button();
+        buttonBack3.setText("Back to Menu");
+        buttonBack3.setOnAction(e -> window.setScene(scene2));
+        Label label8 = new Label("Review Payment and Checkout");
+        VBox layout5 = new VBox(10);
+        layout5.getChildren().addAll(label8,buttonBack3);
+        scene5 = new Scene(layout5, 300,300);
+
+        //Initiate
+        window.setScene(scene1);
+        window.setTitle("LTOsoftware");
+        window.show();
+
+    }
+}
