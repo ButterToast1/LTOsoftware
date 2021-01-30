@@ -44,11 +44,14 @@ public class profileController {
         }
         statusLabel.setVisible(true);
 
-        if (pictureLabel.getText() == "jian.jpg") {
-            name.setText("Jian Daniel T. Lasam");
-            address.setText("Cagayan, Philippines");
-            id.setText("11946342");
-        }
+        loginController loginObject = new loginController();
+        //name.setText(String.valueOf(loginObject.name));
+
+        //if (pictureLabel.getText() == "jian.jpg") {
+          //  name.setText("Jian Daniel T. Lasam");
+          //  address.setText("Cagayan, Philippines");
+           // id.setText("11946342");
+        //}
 
     }
 }

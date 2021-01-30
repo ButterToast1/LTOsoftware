@@ -33,5 +33,7 @@ public class mainMenuController {
 
         window.setScene(profileScene);
         window.show();
+
+
     }
 }
