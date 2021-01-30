@@ -35,9 +35,10 @@
          </font>
       </Label>
       <ListView layoutX="60.0" layoutY="116.0" prefHeight="151.0" prefWidth="153.0" />
-      <ListView layoutX="236.0" layoutY="116.0" prefHeight="35.0" prefWidth="127.0" />
+      <ListView layoutX="-160.0" layoutY="149.0" prefHeight="35.0" prefWidth="127.0" />
       <ListView layoutX="392.0" layoutY="116.0" prefHeight="151.0" prefWidth="153.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="400.0" layoutX="-171.0" layoutY="-1.0" stroke="DODGERBLUE" strokeType="INSIDE" width="200.0" />
       <Label layoutX="232.0" layoutY="319.0" />
+      <TextField layoutX="236.0" layoutY="116.0" prefHeight="25.0" prefWidth="127.0" />
    </children>
 </AnchorPane>
