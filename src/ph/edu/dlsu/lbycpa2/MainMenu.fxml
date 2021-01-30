@@ -4,10 +4,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.mainMenuController">
    <children>
       <Label layoutX="46.0" layoutY="46.0" text="This is the table view" />
-      <Button layoutX="414.0" layoutY="333.0" mnemonicParsing="false" text="Go back to Main Menu" />
+      <Button layoutX="414.0" layoutY="333.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Go back to Main Menu" />
    </children>
 </AnchorPane>

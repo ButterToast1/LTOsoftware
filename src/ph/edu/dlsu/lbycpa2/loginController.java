@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Controller {
+public class loginController {
 
 
     @FXML
@@ -21,6 +21,8 @@ public class Controller {
         //This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+        window.setScene(tableViewScene);
+        window.show();
     }
 
 }
