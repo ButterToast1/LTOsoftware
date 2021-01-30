@@ -21,7 +21,7 @@ public class loginController {
 
 
     @FXML
-    public void changeScreenButtonPushed(ActionEvent event) throws IOException {
+    public void push(ActionEvent event) throws IOException {
 
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene mainMenuScene = new Scene(tableViewParent);

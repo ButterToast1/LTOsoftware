@@ -16,7 +16,7 @@
       <Label layoutX="43.0" layoutY="200.0" text="Jian Daniel Lasam" />
       <Label fx:id="address" layoutX="43.0" layoutY="227.0" text="Cagayan, Philippines" />
       <Label fx:id="id" layoutX="43.0" layoutY="258.0" text="11946342" />
-      <Button layoutX="233.0" layoutY="439.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Go back to main menu" />
+      <Button layoutX="233.0" layoutY="439.0" mnemonicParsing="false" onAction="#push" text="Go back to main menu" />
       <TextField fx:id="pictureLabel" layoutX="227.0" layoutY="29.0" />
       <Button layoutX="253.0" layoutY="68.0" mnemonicParsing="false" onAction="#changePicture" text="Change Picture" />
    </children>

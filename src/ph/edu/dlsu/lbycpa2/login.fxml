@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.loginController">
    <children>
-      <Button layoutX="170.0" layoutY="445.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Log in" />
+      <Button layoutX="170.0" layoutY="445.0" mnemonicParsing="false" onAction="#push" text="Log in" />
       <ImageView fitHeight="253.0" fitWidth="238.0" layoutX="74.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../assets/logo.png" />

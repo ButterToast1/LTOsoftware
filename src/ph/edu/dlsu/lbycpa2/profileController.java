@@ -26,7 +26,7 @@ public class profileController {
     public ImageView pictureView;
 
     @FXML
-    public void changeScreenButtonPushed(ActionEvent event) throws IOException {
+    public void push(ActionEvent event) throws IOException {
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
         Scene mainMenuScene = new Scene(tableViewParent);
 
