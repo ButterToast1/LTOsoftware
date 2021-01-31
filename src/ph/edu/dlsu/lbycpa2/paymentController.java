@@ -24,7 +24,7 @@ import javax.swing.*;
 
 public class paymentController {
 
-
+        public Label total;
         //public ListView list_items;
         @FXML private ListView <String> list_items,cartList;
         @FXML private TextField showPrice;
@@ -33,7 +33,6 @@ public class paymentController {
 
         @FXML
         private void initialize() {
-                Label total;
                 paymentList = FXCollections.observableArrayList();
                 newcartlist = FXCollections.observableArrayList();
                 list_items.setItems(list);
@@ -56,23 +55,14 @@ public class paymentController {
         }
 
         public void addItems(ActionEvent event) {
+                int totalPrice = 1;
                 String item = showPrice.getText();
                 cartList.getItems().addAll(item);
-                int totalPrice = 0;
-                int index2 = list_items.getSelectionModel().getSelectedIndex();
-                if (index2 == 0){
-                        totalPrice += 200;
-                }
-                else if (index2 == 1){
-                        totalPrice += 300;
-                }
-                else if (index2 == 2){
-                        totalPrice += 350;
-                }
-                else{
-                        totalPrice += 400;
-                }
+                totalPrice += 500;
+                //int -> string -> label
 
+                String A = Integer.toString(totalPrice);
+                total.setText(A);
         }
 
         public void removeItems(ActionEvent event) {
@@ -81,6 +71,8 @@ public class paymentController {
                         cartList.getItems().remove(index);
                 }
         }
+
+
         @FXML
         ObservableList <String> list = FXCollections.observableArrayList("License Renewal","Registration Fee", "License Application","Late Fee");
 
