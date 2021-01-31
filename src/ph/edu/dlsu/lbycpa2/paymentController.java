@@ -12,14 +12,11 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-
 import java.awt.*;
 import java.io.IOException;
 public class paymentController {
         public ListView list_items;
-        public void addtocart(ActionEvent event){
-                list_items.getItems().add("Registration Fee");
-                list_items.getItems().add("License Fee");
-                list_items.getItems().add("Speeding Fine");
+        @FXML
+        public void addtocart(ActionEvent event) {
         }
 }
