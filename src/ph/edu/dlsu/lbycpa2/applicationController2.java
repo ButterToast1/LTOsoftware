@@ -29,7 +29,7 @@ public class applicationController2 {
     }
 
     public void popToNextApp(javafx.event.ActionEvent event) throws IOException {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("finalMsg.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
         //This line gets the Stage information

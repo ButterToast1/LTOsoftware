@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="471.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.applicationController">
+<AnchorPane prefHeight="471.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.applicationController2">
    <children>
       <Label layoutX="64.0" layoutY="44.0" text="Driver's License&#10;Renewal Appointment" textAlignment="CENTER">
          <font>
@@ -47,7 +47,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="23.0" layoutY="418.0" mnemonicParsing="false" onAction="#clearTextFields" text="Clear" />
+      <Button layoutX="23.0" layoutY="418.0" mnemonicParsing="false" text="Clear" />
       <Button layoutX="206.0" layoutY="418.0" mnemonicParsing="false" onAction="#popToNextApp" prefHeight="25.0" prefWidth="114.0" text="Next" />
       <Button layoutX="77.0" layoutY="418.0" mnemonicParsing="false" onAction="#popToMainMenu" prefHeight="25.0" prefWidth="114.0" text="Cancel" />
    </children>
