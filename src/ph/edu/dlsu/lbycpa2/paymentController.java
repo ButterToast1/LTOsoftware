@@ -37,6 +37,17 @@ public class paymentController {
                 paymentList.add("Late Fee");
         }
 
+        public void poptomainMenu(ActionEvent event) throws IOException {
+                Parent tableViewParent = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+                Scene tableViewScene = new Scene(tableViewParent);
+
+                //This line gets the Stage information
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+                window.setScene(tableViewScene);
+                window.show();
+        }
+
         public void addtocart(ActionEvent event) {
                 //list_items.getItems().add("");
                 paymentList.add("Registration Fee");
@@ -44,4 +55,6 @@ public class paymentController {
                 paymentList.add("License Renewal");
                 paymentList.add("Late Fee");
         }
+
+
 }
