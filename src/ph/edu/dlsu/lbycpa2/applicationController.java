@@ -21,8 +21,11 @@ public class applicationController {
     public TextField lNameTextField;
     public TextField addressTextField;
     public TextField telTextField;
-
     public Label statusLabel;
+
+    public String name;
+    public String address;
+    public String cellphoneNum;
 
     boolean f1, f3, f4;
     // Button clear, submit;
@@ -66,6 +69,11 @@ public class applicationController {
         if (!f1 && !f3 && !f4){
             window.setScene(tableViewScene);
             window.show();
+
+            name = fNameTextField.getText() + " " + lNameTextField.getText();
+            address = addressTextField.getText();
+            // cellphoneNum = telTextField.getText();
+
         }
 
         else {

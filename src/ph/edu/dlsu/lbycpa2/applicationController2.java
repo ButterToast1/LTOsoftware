@@ -14,7 +14,8 @@ public class applicationController2 {
     public TextField regionField;
     public TextField officeField;
 
-
+    public String region;
+    public String office;
 
     public void popToMainMenu(javafx.event.ActionEvent event) throws IOException {
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
