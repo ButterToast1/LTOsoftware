@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="508.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.profileController">
+   <children>
+      <ImageView fx:id="pictureView" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/jian.jpg" />
+         </image></ImageView>
+      <Label layoutX="43.0" layoutY="200.0" text="Jian Daniel Lasam" />
+      <Label fx:id="address" layoutX="43.0" layoutY="227.0" text="Cagayan, Philippines" />
+      <Label fx:id="id" layoutX="43.0" layoutY="258.0" text="11946342" />
+      <Button layoutX="233.0" layoutY="439.0" mnemonicParsing="false" onAction="#push" text="Go back to main menu" />
+      <TextField fx:id="pictureLabel" layoutX="227.0" layoutY="29.0" />
+      <Button layoutX="253.0" layoutY="68.0" mnemonicParsing="false" onAction="#changePicture" text="Change Picture" />
+   </children>
+</AnchorPane>
