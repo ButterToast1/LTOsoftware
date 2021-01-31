@@ -27,9 +27,7 @@ public class applicationController {
     public String address;
     public String cellphoneNum;
 
-    boolean f1, f3, f4;
-    // Button clear, submit;
-    // String name,address,tel,tin,nationality;
+    boolean f1, f2, f3, f4, f5;
 
     @FXML
     public void clearTextFields()  {
@@ -38,8 +36,6 @@ public class applicationController {
         lNameTextField.clear();
         addressTextField.clear();
         telTextField.clear();
-        //regionField.clear();
-        //officeField.clear();
     }
 
 
@@ -61,19 +57,25 @@ public class applicationController {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         f1 = fNameTextField.getText().trim().isEmpty();
+        f2 = mNameTextField.getText().trim().isEmpty();
         f3 = lNameTextField.getText().trim().isEmpty();
         f4 = addressTextField.getText().trim().isEmpty();
+        f5 = telTextField.getText().trim().isEmpty();
 
+        if (!f1 && !f2 && !f3 && !f4 && !f5) {
+            name = fNameTextField.getText() + " " + mNameTextField.getText() + " " + lNameTextField.getText();
+            address = addressTextField.getText();
+            cellphoneNum = telTextField.getText();
 
-
-        if (!f1 && !f3 && !f4){
             window.setScene(tableViewScene);
             window.show();
-
+        }
+        else if (!f1 && !f3 && !f4){
             name = fNameTextField.getText() + " " + lNameTextField.getText();
             address = addressTextField.getText();
-            // cellphoneNum = telTextField.getText();
 
+            window.setScene(tableViewScene);
+            window.show();
         }
 
         else {
