@@ -12,6 +12,8 @@ import java.util.ResourceBundle;
 
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+
 import javafx.stage.Stage;
 
 
@@ -23,7 +25,7 @@ public class applicationController {
     public TextField lNameTextField;
     public TextField addressTextField;
     public TextField telTextField;
-    private Label statusLabel;
+    public Label statusLabel;
 
     boolean f1, f2, f3, f4, f5;
     // Button clear, submit;
@@ -58,6 +60,8 @@ public class applicationController {
         f1 = fNameTextField.getText().trim().isEmpty();
         f3 = lNameTextField.getText().trim().isEmpty();
         f4 = addressTextField.getText().trim().isEmpty();
+
+
 
         if (!f1 && !f3 && !f4){
             window.setScene(tableViewScene);

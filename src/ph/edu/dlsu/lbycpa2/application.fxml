@@ -21,9 +21,10 @@
       <TextField fx:id="fNameTextField" layoutX="48.0" layoutY="163.0" prefHeight="25.0" prefWidth="254.0" promptText="First Name" />
       <TextField fx:id="mNameTextField" layoutX="48.0" layoutY="198.0" prefHeight="25.0" prefWidth="254.0" promptText="Middle Name" />
       <TextField fx:id="lNameTextField" layoutX="48.0" layoutY="234.0" prefHeight="25.0" prefWidth="254.0" promptText="Last Name" />
-      <TextField fx:id="telTextField" layoutX="48.0" layoutY="304.0" prefHeight="25.0" prefWidth="254.0" promptText="Mobile Number (+63) XXX-XXX-XXXX" />
       <TextField fx:id="addressTextField" layoutX="48.0" layoutY="269.0" prefHeight="25.0" prefWidth="254.0" promptText="Email Address" />
+      <TextField fx:id="telTextField" layoutX="48.0" layoutY="304.0" prefHeight="25.0" prefWidth="254.0" promptText="Mobile Number (+63) XXX-XXX-XXXX" />
       <Button layoutX="13.0" layoutY="408.0" mnemonicParsing="false" text="Clear" />
+   <Button layoutX="67.0" layoutY="408.0" mnemonicParsing="false" onAction="#popToMainMenu" prefHeight="25.0" prefWidth="114.0" text="Cancel" />
       <Button layoutX="196.0" layoutY="408.0" mnemonicParsing="false" onAction="#popToNextApp" prefHeight="25.0" prefWidth="114.0" text="Next" />
    <Label layoutX="13.0" layoutY="14.0" text="LTO Appointment System" textFill="WHITE">
       <font>
@@ -45,7 +46,7 @@
          <Font size="14.0" />
       </font>
    </Label>
-   <Label layoutX="51.0" layoutY="350.0" prefHeight="20.0" prefWidth="177.0" text="Fields with asterisk must be filled" textFill="#111111">
+   <Label fx:id="statusLabel" layoutX="51.0" layoutY="350.0" prefHeight="20.0" prefWidth="177.0" text="Fields with asterisk must be filled" textFill="#111111">
       <font>
          <Font size="11.0" />
       </font>
@@ -55,5 +56,4 @@
          <Font size="14.0" />
       </font>
    </Label>
-   <Button layoutX="67.0" layoutY="408.0" mnemonicParsing="false" onAction="#popToMainMenu" prefHeight="25.0" prefWidth="114.0" text="Cancel" />
 </AnchorPane>

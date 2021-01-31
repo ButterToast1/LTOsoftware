@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ph.edu.dlsu.lbycpa2.applicationController2"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="471.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.applicationController">
+   <children>
+      <Label layoutX="64.0" layoutY="44.0" text="Driver's License&#10;Renewal Appointment" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b4db9" height="85.0" layoutX="-33.0" layoutY="-54.0" stroke="DODGERBLUE" strokeType="INSIDE" width="382.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="LTO Appointment System" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="48.0" layoutY="169.0" prefHeight="25.0" prefWidth="221.0" promptText="Region" />
+      <Label layoutX="47.0" layoutY="139.0" text="Site Location">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="172.0" prefHeight="20.0" prefWidth="4.0" text="*" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="47.0" layoutY="211.0" prefHeight="25.0" prefWidth="221.0" promptText="Office" />
+      <Label layoutX="279.0" layoutY="214.0" prefHeight="20.0" prefWidth="4.0" text="*" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusLabel" layoutX="61.0" layoutY="360.0" prefHeight="20.0" prefWidth="177.0" text="Fields with asterisk must be filled" textFill="#111111">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="350.0" prefHeight="20.0" prefWidth="4.0" text="*" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="23.0" layoutY="418.0" mnemonicParsing="false" text="Clear" />
+      <Button layoutX="206.0" layoutY="418.0" mnemonicParsing="false" onAction="#popToNextApp" prefHeight="25.0" prefWidth="114.0" text="Next" />
+      <Button layoutX="77.0" layoutY="418.0" mnemonicParsing="false" onAction="#popToMainMenu" prefHeight="25.0" prefWidth="114.0" text="Cancel" />
+   </children>
 </AnchorPane>

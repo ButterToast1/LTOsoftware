@@ -45,7 +45,7 @@
          <Font size="14.0" />
       </font>
    </Label>
-   <Label layoutX="51.0" layoutY="350.0" prefHeight="20.0" prefWidth="177.0" text="Fields with asterisk must be filled" textFill="#111111">
+   <Label fx:id="statusLabel" layoutX="51.0" layoutY="350.0" prefHeight="20.0" prefWidth="177.0" text="Fields with asterisk must be filled" textFill="#111111">
       <font>
          <Font size="11.0" />
       </font>
