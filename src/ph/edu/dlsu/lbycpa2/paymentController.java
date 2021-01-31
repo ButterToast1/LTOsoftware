@@ -1,5 +1,7 @@
 package ph.edu.dlsu.lbycpa2;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,14 +16,32 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import java.awt.*;
 import java.io.IOException;
+
+
 public class paymentController {
+
+
         public ListView list_items;
+
+        ObservableList<String> paymentList;
+
+
         @FXML
+        private void initialize() {
+                paymentList = FXCollections.observableArrayList();
+                list_items.setItems(paymentList);
+
+                paymentList.add("Registration Fee");
+                paymentList.add("License Application");
+                paymentList.add("License Renewal");
+                paymentList.add("Late Fee");
+        }
+
         public void addtocart(ActionEvent event) {
                 //list_items.getItems().add("");
-                list_items.getItems().add("Registration Fee");
-                list_items.getItems().add("License Application");
-                list_items.getItems().add("License Renewal");
-                list_items.getItems().add("Late Fee");
+                paymentList.add("Registration Fee");
+                paymentList.add("License Application");
+                paymentList.add("License Renewal");
+                paymentList.add("Late Fee");
         }
 }
