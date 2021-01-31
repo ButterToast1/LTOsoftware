@@ -9,7 +9,6 @@
    <children>
       <Button layoutX="71.0" layoutY="315.0" mnemonicParsing="false" onAction="#poptomainMenu" text="Back" />
       <Button layoutX="479.0" layoutY="315.0" mnemonicParsing="false" text="Checkout" />
-      <Button layoutX="425.0" layoutY="315.0" mnemonicParsing="false" text="Clear" />
       <Label layoutX="265.0" layoutY="276.0" prefHeight="17.0" prefWidth="41.0" text="Total:">
          <font>
             <Font size="14.0" />
@@ -36,16 +35,17 @@
       </Label>
       <ListView fx:id="list_items" layoutX="60.0" layoutY="116.0" prefHeight="151.0" prefWidth="153.0" />
       <ListView layoutX="-160.0" layoutY="149.0" prefHeight="35.0" prefWidth="127.0" />
-      <ListView layoutX="392.0" layoutY="116.0" prefHeight="151.0" prefWidth="153.0" />
+      <ListView fx:id="cartList" layoutX="392.0" layoutY="116.0" prefHeight="151.0" prefWidth="153.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="400.0" layoutX="-171.0" layoutY="-1.0" stroke="DODGERBLUE" strokeType="INSIDE" width="200.0" />
       <Label layoutX="232.0" layoutY="319.0" />
-      <TextField layoutX="236.0" layoutY="149.0" prefHeight="25.0" prefWidth="127.0" />
-      <Button layoutX="239.0" layoutY="315.0" mnemonicParsing="false" text="Add" />
-      <Button layoutX="286.0" layoutY="315.0" mnemonicParsing="false" text="Remove Recent" />
-      <Label layoutX="236.0" layoutY="116.0" text=".">
+      <TextField fx:id="showPrice" layoutX="236.0" layoutY="116.0" prefHeight="25.0" prefWidth="127.0" />
+      <Button layoutX="239.0" layoutY="315.0" mnemonicParsing="false" onAction="#addItems" text="Add" />
+      <Button layoutX="286.0" layoutY="315.0" mnemonicParsing="false" onAction="#removeItems" text="Remove" />
+      <Label fx:id="displayItem" layoutX="237.0" layoutY="154.0" text=".">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
+      <Label fx:id="total" layoutX="321.0" layoutY="278.0" text="X" />
    </children>
 </AnchorPane>
