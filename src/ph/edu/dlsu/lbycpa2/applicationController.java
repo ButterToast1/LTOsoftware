@@ -4,15 +4,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+
 
 import javafx.stage.Stage;
 
@@ -27,18 +23,25 @@ public class applicationController {
     public TextField telTextField;
     public Label statusLabel;
 
-    boolean f1, f2, f3, f4, f5;
+    public String name;
+    public String address;
+    public String cellphoneNum;
+
+    boolean f1, f3, f4;
     // Button clear, submit;
     // String name,address,tel,tin,nationality;
 
     @FXML
-    public void clearTextFields(ActionEvent event)  {
-        
+    public void clearTextFields()  {
+        fNameTextField.clear();
+        mNameTextField.clear();
+        lNameTextField.clear();
+        addressTextField.clear();
+        telTextField.clear();
+        //regionField.clear();
+        //officeField.clear();
     }
 
-    public void submithandleButtonClick(ActionEvent event){
-
-    }
 
     public void popToMainMenu(javafx.event.ActionEvent event) throws IOException {
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
@@ -66,6 +69,11 @@ public class applicationController {
         if (!f1 && !f3 && !f4){
             window.setScene(tableViewScene);
             window.show();
+
+            name = fNameTextField.getText() + " " + lNameTextField.getText();
+            address = addressTextField.getText();
+            // cellphoneNum = telTextField.getText();
+
         }
 
         else {

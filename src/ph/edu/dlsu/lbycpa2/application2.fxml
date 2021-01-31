@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="471.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.applicationController">
+<AnchorPane prefHeight="471.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.applicationController2">
    <children>
       <Label layoutX="64.0" layoutY="44.0" text="Driver's License&#10;Renewal Appointment" textAlignment="CENTER">
          <font>
@@ -20,7 +20,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="48.0" layoutY="169.0" prefHeight="25.0" prefWidth="221.0" promptText="Region" />
+      <TextField fx:id="regionField" layoutX="48.0" layoutY="169.0" prefHeight="25.0" prefWidth="221.0" promptText="Region" />
       <Label layoutX="47.0" layoutY="139.0" text="Site Location">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -31,7 +31,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="47.0" layoutY="211.0" prefHeight="25.0" prefWidth="221.0" promptText="Office" />
+      <TextField fx:id="officeField" layoutX="47.0" layoutY="211.0" prefHeight="25.0" prefWidth="221.0" promptText="Office" />
       <Label layoutX="279.0" layoutY="214.0" prefHeight="20.0" prefWidth="4.0" text="*" textFill="RED">
          <font>
             <Font size="14.0" />
