@@ -39,7 +39,7 @@ public class mainMenuController {
     }
 
     public void changeScreenButtontoRegistration(ActionEvent event) throws IOException {
-        Parent tableViewParent2 = FXMLLoader.load(getClass().getResource("registration.fxml"));
+        Parent tableViewParent2 = FXMLLoader.load(getClass().getResource("application.fxml"));
         Scene registrationScene = new Scene(tableViewParent2);
 
         //This line gets the Stage information
