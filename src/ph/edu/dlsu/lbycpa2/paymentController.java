@@ -18,5 +18,10 @@ public class paymentController {
         public ListView list_items;
         @FXML
         public void addtocart(ActionEvent event) {
+                //list_items.getItems().add("");
+                list_items.getItems().add("Registration Fee");
+                list_items.getItems().add("License Application");
+                list_items.getItems().add("License Renewal");
+                list_items.getItems().add("Late Fee");
         }
 }

@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 
 public class mainMenuController {
@@ -35,5 +36,27 @@ public class mainMenuController {
         window.show();
 
 
+    }
+
+    public void changeScreenButtontoRegistration(ActionEvent event) throws IOException {
+        Parent tableViewParent2 = FXMLLoader.load(getClass().getResource("registration.fxml"));
+        Scene registrationScene = new Scene(tableViewParent2);
+
+        //This line gets the Stage information
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(registrationScene);
+        window.show();
+    }
+
+    public void changeScreenButtontoPayment(ActionEvent event) throws IOException {
+        Parent tableViewParent3 = FXMLLoader.load(getClass().getResource("payment.fxml"));
+        Scene paymentScene = new Scene(tableViewParent3);
+
+        //This line gets the Stage information
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(paymentScene);
+        window.show();
     }
 }
