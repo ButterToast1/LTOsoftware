@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ph.edu.dlsu.lbycpa2.applicationController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="426.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.applicationController">
+   <children>
+      <Label layoutX="50.0" layoutY="31.0" text="Registration Form">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="445.0" layoutX="-68.0" layoutY="-19.0" stroke="DODGERBLUE" strokeType="INSIDE" width="93.0" />
+      <Label layoutX="50.0" layoutY="79.0" text="Name: " />
+      <Label layoutX="50.0" layoutY="109.0" text="Present Address:" />
+      <Label layoutX="50.0" layoutY="204.0" text="Nationality" />
+      <Label layoutX="49.0" layoutY="138.0" text="Tel. No:" />
+      <Label layoutX="49.0" layoutY="169.0" text="T.I.N:" />
+      <TextField layoutX="145.0" layoutY="75.0" />
+      <TextField layoutX="145.0" layoutY="105.0" />
+      <TextField layoutX="145.0" layoutY="134.0" />
+      <TextField layoutX="145.0" layoutY="165.0" />
+      <TextField layoutX="145.0" layoutY="200.0" />
+      <Button layoutX="145.0" layoutY="282.0" mnemonicParsing="false" text="Clear" />
+      <Button layoutX="141.0" layoutY="329.0" mnemonicParsing="false" text="Submit" />
+   </children>
 </AnchorPane>
