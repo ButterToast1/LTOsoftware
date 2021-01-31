@@ -16,12 +16,13 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import java.awt.*;
 import java.io.IOException;
+import javafx.event.ActionEvent;
 
 
 public class paymentController {
 
 
-        public ListView list_items;
+        //public ListView list_items;
 
         ObservableList<String> paymentList;
 
@@ -29,12 +30,12 @@ public class paymentController {
         @FXML
         private void initialize() {
                 paymentList = FXCollections.observableArrayList();
-                list_items.setItems(paymentList);
+                list_items.setItems(list);
 
-                paymentList.add("Registration Fee");
-                paymentList.add("License Application");
-                paymentList.add("License Renewal");
-                paymentList.add("Late Fee");
+                //paymentList.add("Registration Fee");
+                //paymentList.add("License Application");
+                //paymentList.add("License Renewal");
+                //paymentList.add("Late Fee");
         }
 
         public void poptomainMenu(ActionEvent event) throws IOException {
@@ -48,13 +49,11 @@ public class paymentController {
                 window.show();
         }
 
-        public void addtocart(ActionEvent event) {
-                //list_items.getItems().add("");
-                paymentList.add("Registration Fee");
-                paymentList.add("License Application");
-                paymentList.add("License Renewal");
-                paymentList.add("Late Fee");
+        public void addItems(ActionEvent event) {
         }
+        @FXML
+        ListView <String> list_items;
+        ObservableList <String> list = FXCollections.observableArrayList("License Renewal","Registration Fee", "License Application","Late Fee");
 
 
 }
