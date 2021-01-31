@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 
+
 import javafx.stage.Stage;
 
 
@@ -27,13 +28,17 @@ public class applicationController {
     public TextField telTextField;
     public Label statusLabel;
 
-    boolean f1, f2, f3, f4, f5;
+    boolean f1, f3, f4;
     // Button clear, submit;
     // String name,address,tel,tin,nationality;
 
     @FXML
-    public void clearTextFields(ActionEvent event)  {
-        
+    public void clearTextFields(javafx.event.ActionEvent event)  {
+        fNameTextField.clear();
+        mNameTextField.clear();
+        lNameTextField.clear();
+        addressTextField.clear();
+        telTextField.clear();
     }
 
     public void submithandleButtonClick(ActionEvent event){
