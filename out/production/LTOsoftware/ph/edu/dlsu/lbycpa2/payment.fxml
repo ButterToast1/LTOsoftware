@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.paymentController">
+   <children>
+      <Button layoutX="71.0" layoutY="315.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="479.0" layoutY="315.0" mnemonicParsing="false" text="Checkout" />
+      <Button layoutX="425.0" layoutY="315.0" mnemonicParsing="false" text="Clear" />
+      <Label layoutX="265.0" layoutY="276.0" prefHeight="17.0" prefWidth="41.0" text="Total:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="62.0" layoutY="29.0" text="Payments">
+         <font>
+            <Font size="35.0" />
+         </font></Label>
+      <Line endX="372.0" layoutX="171.0" layoutY="303.0" startX="-100.0" />
+      <Label layoutX="62.0" layoutY="81.0" text="Items">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="81.0" text="Price">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="392.0" layoutY="81.0" text="Shopping Cart">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ListView layoutX="60.0" layoutY="116.0" prefHeight="151.0" prefWidth="153.0" />
+      <ListView layoutX="-160.0" layoutY="149.0" prefHeight="35.0" prefWidth="127.0" />
+      <ListView layoutX="392.0" layoutY="116.0" prefHeight="151.0" prefWidth="153.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="400.0" layoutX="-171.0" layoutY="-1.0" stroke="DODGERBLUE" strokeType="INSIDE" width="200.0" />
+      <Label layoutX="232.0" layoutY="319.0" />
+      <TextField layoutX="236.0" layoutY="116.0" prefHeight="25.0" prefWidth="127.0" />
+   </children>
+</AnchorPane>
