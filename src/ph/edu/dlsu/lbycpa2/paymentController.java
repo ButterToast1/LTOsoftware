@@ -18,6 +18,8 @@ import java.io.IOException;
 public class paymentController {
         public ListView list_items;
         public void addtocart(ActionEvent event){
-
+                list_items.getItems().add("Registration Fee");
+                list_items.getItems().add("License Fee");
+                list_items.getItems().add("Speeding Fine");
         }
 }
