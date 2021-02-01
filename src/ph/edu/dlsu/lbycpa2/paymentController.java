@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -18,20 +19,24 @@ import java.awt.*;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 
+import javax.swing.*;
+
 
 public class paymentController {
 
-
+        public Label total;
         //public ListView list_items;
+        @FXML private ListView <String> list_items,cartList;
+        @FXML private TextField showPrice;
 
-        ObservableList<String> paymentList;
-
+        ObservableList <String> paymentList,newcartlist;
 
         @FXML
         private void initialize() {
                 paymentList = FXCollections.observableArrayList();
+                newcartlist = FXCollections.observableArrayList();
                 list_items.setItems(list);
-
+                cartList.setItems(newcartlist);
                 //paymentList.add("Registration Fee");
                 //paymentList.add("License Application");
                 //paymentList.add("License Renewal");
@@ -50,9 +55,25 @@ public class paymentController {
         }
 
         public void addItems(ActionEvent event) {
+                int totalPrice = 1;
+                String item = showPrice.getText();
+                cartList.getItems().addAll(item);
+                totalPrice += 500;
+                //int -> string -> label
+
+                String A = Integer.toString(totalPrice);
+                total.setText(A);
         }
+
+        public void removeItems(ActionEvent event) {
+                int index = cartList.getSelectionModel().getSelectedIndex();
+                if (index >= 0) {
+                        cartList.getItems().remove(index);
+                }
+        }
+
+
         @FXML
-        ListView <String> list_items;
         ObservableList <String> list = FXCollections.observableArrayList("License Renewal","Registration Fee", "License Application","Late Fee");
 
 
