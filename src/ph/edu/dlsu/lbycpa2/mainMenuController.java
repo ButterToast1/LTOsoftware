@@ -1,5 +1,6 @@
 package ph.edu.dlsu.lbycpa2;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -11,7 +12,7 @@ import java.io.IOException;
 public class mainMenuController {
 
 
-    
+    @FXML
     public void changeScreenButtontoProfile(ActionEvent event) throws IOException {
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("profile.fxml"));
         Scene profileScene = new Scene(tableViewParent);

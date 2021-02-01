@@ -13,7 +13,7 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="189.0" layoutY="-46.0" stroke="#1e90e1" strokeType="INSIDE" width="615.0" />
       <Label layoutX="44.0" layoutY="104.0" text="Welcome to the LTO Registration Application" textFill="WHITE" />
-      <Button layoutX="237.0" layoutY="338.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="126.0" text="Exit Program" visible="false" />
+      <Button layoutX="237.0" layoutY="338.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Exit Program" visible="false" />
       <Button layoutX="237.0" layoutY="188.0" mnemonicParsing="false" onAction="#changeScreenButtontoProfile" prefHeight="25.0" prefWidth="126.0" text="Profile" />
       <Button layoutX="237.0" layoutY="242.0" mnemonicParsing="false" onAction="#changeScreenButtontoRegistration" prefHeight="25.0" prefWidth="126.0" text="Renew License" />
       <Button layoutX="237.0" layoutY="302.0" mnemonicParsing="false" onAction="#changeScreenButtontoPayment" prefHeight="25.0" prefWidth="126.0" text="Review Payments" />
