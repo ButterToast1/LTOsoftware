@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         primaryStage.setTitle("LTOSoftware");
-        primaryStage.setScene(new Scene(root, 384, 499));
+        primaryStage.setScene(new Scene(root, 980, 680));
         primaryStage.show();
     }
 
