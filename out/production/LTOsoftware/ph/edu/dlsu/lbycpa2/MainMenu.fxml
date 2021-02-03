@@ -1,32 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.mainMenuController">
+<AnchorPane prefHeight="680.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.mainMenuController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="189.0" layoutY="-46.0" stroke="#1e90e1" strokeType="INSIDE" width="615.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DARKBLUE" height="189.0" layoutY="-52.0" stroke="#1e90e1" strokeType="INSIDE" width="980.0" />
       <Label layoutX="44.0" layoutY="104.0" text="Welcome to the LTO Registration Application" textFill="WHITE" />
-      <Button layoutX="237.0" layoutY="338.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Exit Program" visible="false" />
-      <Button layoutX="237.0" layoutY="188.0" mnemonicParsing="false" onAction="#changeScreenButtontoProfile" prefHeight="25.0" prefWidth="126.0" text="Profile" />
-      <Button layoutX="237.0" layoutY="242.0" mnemonicParsing="false" onAction="#changeScreenButtontoRegistration" prefHeight="25.0" prefWidth="126.0" text="Renew License" />
-      <Button layoutX="237.0" layoutY="302.0" mnemonicParsing="false" onAction="#changeScreenButtontoPayment" prefHeight="25.0" prefWidth="126.0" text="Review Payments" />
       <Label layoutX="44.0" layoutY="42.0" text="LTOSoftware" textFill="WHITE">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>
       </Label>
       <Line endX="100.0" layoutX="143.0" layoutY="93.0" startX="-100.0" stroke="WHITE" />
-      <ImageView fitHeight="128.0" fitWidth="155.0" layoutX="483.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="155.0" layoutX="832.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../assets/LTO.png" />
          </image>
       </ImageView>
+      <VBox layoutX="6.0" layoutY="137.0" prefHeight="544.0" prefWidth="201.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#changeScreenButtontoProfile" prefHeight="25.0" prefWidth="126.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Profile">
+               <VBox.margin>
+                  <Insets left="40.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#changeScreenButtontoRegistration" prefHeight="25.0" prefWidth="126.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Renew License">
+               <VBox.margin>
+                  <Insets left="40.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#changeScreenButtontoPayment" prefHeight="25.0" prefWidth="126.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Review Payments">
+               <VBox.margin>
+                  <Insets left="40.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Exit Program">
+               <VBox.margin>
+                  <Insets left="40.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="316.0" layoutY="180.0" text="Label" />
    </children>
 </AnchorPane>

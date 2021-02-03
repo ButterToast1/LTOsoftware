@@ -32,17 +32,17 @@ public class loginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         TranslateTransition t = new TranslateTransition(Duration.seconds(1), vbox);
         t.setToX(vbox.getLayoutX() * 20);
+        try{
+            fxml = FXMLLoader.load(getClass().getResource("SignIn.fxml"));
+            vbox.getChildren().removeAll();
+            vbox.getChildren().setAll(fxml);
+
+        }catch(IOException ex){
+
+        }
         t.play();
         t.setOnFinished((e) -> {
-            try{
-                fxml = FXMLLoader.load(getClass().getResource("SignIn.fxml"));
-                vbox.getChildren().removeAll();
-                vbox.getChildren().setAll(fxml);
 
-            }catch(IOException ex){
-
-
-            }
         });
     }
 
