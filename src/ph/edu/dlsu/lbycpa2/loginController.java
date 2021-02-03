@@ -28,28 +28,6 @@ public class loginController implements Initializable {
     public Parent fxml;
 
 
-    @FXML
-    public void push(ActionEvent event) throws IOException {
-
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
-        Scene mainMenuScene = new Scene(tableViewParent);
-
-        //This line gets the Stage information
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-
-
-        if (name.getText().equals("user") && password.getText().equals("pass")){
-            window.setScene(mainMenuScene);
-            window.show();
-        }
-
-        else {
-            statusLabel.setVisible(true);
-            statusLabel.setText("Incorrect username or password.");
-        }
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         TranslateTransition t = new TranslateTransition(Duration.seconds(1), vbox);
@@ -72,6 +50,7 @@ public class loginController implements Initializable {
     private void open_signIn(ActionEvent event) {
         TranslateTransition t = new TranslateTransition(Duration.seconds(1), vbox);
         t.setToX(vbox.getLayoutX() * 20);
+        t.play();
         t.setOnFinished((e) -> {
             try{
                 System.out.println("test");
@@ -85,7 +64,7 @@ public class loginController implements Initializable {
 
             }
         });
-        t.play();
+
 
     }
 
