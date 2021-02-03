@@ -7,10 +7,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.util.*;
+import java.io.*;
 import java.io.IOException;
 
 public class finalMsgController {
 
+    private Scanner x;
     int n = 0;
 
     HashMap<String,LinkedList<String>> adjList = new HashMap<>();
