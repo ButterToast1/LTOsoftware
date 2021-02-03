@@ -20,7 +20,7 @@
       </Label>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
          <children>
-            <TextField fx:id="nameTextField" promptText="Email" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="emailTextField" promptText="Email" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
          </children>
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="15.0" />

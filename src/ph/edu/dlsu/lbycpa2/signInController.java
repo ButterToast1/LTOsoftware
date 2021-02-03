@@ -16,14 +16,14 @@ import java.util.Scanner;
 
 public class signInController {
 
-    public TextField nameTextField;
+    public TextField emailTextField;
     public TextField passwordTextField;
     public Label statusLabel;
 
-    public String name1;
+    public String fullName;
+    public String email;
     public String password;
     private Scanner x;
-    boolean breaker = false;
 
     @FXML
     public void push(ActionEvent event) throws IOException {
@@ -37,9 +37,10 @@ public class signInController {
         openFile();
         readFile();
         closeFile();
-        if (nameTextField.getText().equals(name1) && passwordTextField.getText().equals(password)){
+        if (emailTextField.getText().equals(email) && passwordTextField.getText().equals(password)){
             window.setScene(mainMenuScene);
             window.show();
+            System.out.println("variable emailTextField is: " + email + " while password is: "+ password);
         }
 
         else {
@@ -58,17 +59,28 @@ public class signInController {
     }
 
     public void readFile() {
-        int i;
 
-        name1 = x.next();
+        email = x.next();
         password = x.next();
 
-        while(x.hasNext() && !name1.equals(nameTextField.getText())) {
-            name1 = x.next();
+        String firstName = x.next();
+        String middleInitial = x.next();
+        String lastName = x.next();
+        fullName = firstName + middleInitial + lastName;
+
+        while(x.hasNext() && !email.equals(emailTextField.getText())) {
+
+            email = x.next();
             password = x.next();
 
-            System.out.printf("%s %s\n", name1, password);
+            firstName = x.next();
+            middleInitial = x.next();
+            lastName = x.next();
+            fullName = firstName + " " + middleInitial + " " + lastName;
+
+            System.out.printf("%s %s %s\n", email, password, fullName);
         }
+
         System.out.println("success");
     }
 
