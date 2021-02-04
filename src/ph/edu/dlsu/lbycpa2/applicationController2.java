@@ -57,12 +57,11 @@ public class applicationController2 {
         p2 = officeField.getText().trim().isEmpty();
 
         if (!p1 && !p2) {
-            region = regionField.getText();
+            region = regionField.getText() +" ";
             office = officeField.getText();
 
             pw.print(region);
-            pw.print(" ");
-            pw.print(office);
+            pw.println(office);
 
             pw.close();
 

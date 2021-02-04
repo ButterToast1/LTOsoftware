@@ -18,18 +18,18 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="21.0" layoutY="130.0" text="Lorem ipsum is a dummy text&#10;for websites" textFill="WHITE">
+            <Label layoutX="21.0" layoutY="130.0" text="Please make one on the field&#10;on the right" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
             <Button layoutX="21.0" layoutY="184.0" mnemonicParsing="false" onAction="#open_SignUp" prefHeight="32.0" prefWidth="93.0" styleClass="trans-btn-white-border" stylesheets="@loginStyle.css" text="Sign up" />
-            <Label layoutX="700.0" layoutY="53.0" text="Do you have an account?" textFill="WHITE">
+            <Label layoutX="700.0" layoutY="53.0" text="LTO Online Portal" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="700.0" layoutY="83.0" text="Lorem ipsum is a dummy text&#10;for websites" textFill="WHITE">
+            <Label layoutX="700.0" layoutY="98.0" text="Please sign in to enter&#10;the main menu" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
