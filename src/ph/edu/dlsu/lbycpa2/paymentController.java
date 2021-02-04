@@ -100,4 +100,15 @@ public class paymentController {
         movies.sort(Comparator.comparing(Movie::getStarred).reversed().thenComparing(Comparator.comparing(Movie::getRating) .reversed()));
         movies.forEach(System.out::println);*/
 
+        //New listarray
+        /*"Driving w/o License",3000,
+        "No Seatbelt",1000,
+        "Driving under the Influence",5000,
+        "Careless Driving",1000,
+        "Driving w/o Registration",10000,
+        "Illegally Modified Car",5000,
+        "Running a Right-Hand Car",50000,
+        "Missing Car Parts",5000,
+        "Illegal Plate",5000,
+        "Smoke Belching",6000*/
 }
