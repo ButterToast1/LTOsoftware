@@ -31,7 +31,6 @@ public class signUpController {
     public String email;
     public String password;
     private Scanner x;
-    public Formatter y;
 
     @FXML
     public void push(ActionEvent event) throws IOException {

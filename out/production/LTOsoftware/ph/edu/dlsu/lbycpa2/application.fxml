@@ -56,4 +56,14 @@
          <Font size="14.0" />
       </font>
    </Label>
+   <Label layoutX="310.0" layoutY="201.0" prefHeight="20.0" prefWidth="4.0" text="*" textFill="RED">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="310.0" layoutY="307.0" prefHeight="20.0" prefWidth="4.0" text="*" textFill="RED">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
 </AnchorPane>

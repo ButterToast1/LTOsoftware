@@ -4,7 +4,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
@@ -46,6 +51,12 @@ public class applicationController {
         //This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+        File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\renewalDetails");
+        FileWriter fw = new FileWriter(file, true);
+        PrintWriter pw = new PrintWriter(fw);
+
+
+
         window.setScene(tableViewScene);
         window.show();
     }
@@ -56,6 +67,10 @@ public class applicationController {
         //This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+        File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\renewalDetails");
+        FileWriter fw = new FileWriter(file, true);
+        PrintWriter pw = new PrintWriter(fw);
+
         f1 = fNameTextField.getText().trim().isEmpty();
         f2 = mNameTextField.getText().trim().isEmpty();
         f3 = lNameTextField.getText().trim().isEmpty();
@@ -63,20 +78,21 @@ public class applicationController {
         f5 = telTextField.getText().trim().isEmpty();
 
         if (!f1 && !f2 && !f3 && !f4 && !f5) {
-            name = fNameTextField.getText() + " " + mNameTextField.getText() + " " + lNameTextField.getText();
+            name = fNameTextField.getText() + mNameTextField.getText() + lNameTextField.getText();
             address = addressTextField.getText();
             cellphoneNum = telTextField.getText();
 
-            window.setScene(tableViewScene);
-            window.show();
-        }
-        else if (!f1 && !f3 && !f4){
-            name = fNameTextField.getText() + " " + lNameTextField.getText();
-            address = addressTextField.getText();
+            pw.print(name);
+            pw.print(" ");
+            pw.print(address);
+            pw.print(" ");
+            pw.println(cellphoneNum);
+            pw.close();
 
             window.setScene(tableViewScene);
             window.show();
         }
+
 
         else {
             statusLabel.setText("One of the fields is missing.");
