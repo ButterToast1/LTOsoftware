@@ -74,16 +74,13 @@ public class applicationController {
         f5 = telTextField.getText().trim().isEmpty();
 
         if (!f1 && !f2 && !f3 && !f4 && !f5) {
-            name = fNameTextField.getText() + mNameTextField.getText() + lNameTextField.getText();
-            address = addressTextField.getText();
-            cellphoneNum = telTextField.getText();
+            name = fNameTextField.getText() + mNameTextField.getText() + lNameTextField.getText() + " ";
+            address = addressTextField.getText() + " ";
+            cellphoneNum = telTextField.getText() + " ";
 
             pw.print(name);
-            pw.print(" ");
             pw.print(address);
-            pw.print(" ");
             pw.print(cellphoneNum);
-            pw.print(" ");
             pw.close();
 
             window.setScene(tableViewScene);
