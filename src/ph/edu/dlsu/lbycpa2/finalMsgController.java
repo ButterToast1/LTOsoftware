@@ -18,9 +18,35 @@ public class finalMsgController {
     HashMap<String,LinkedList<String>> adjList = new HashMap<>();
 
     @FXML
-    public void initialize() {
+    public void initialize() throws IOException {
         applicationController object = new applicationController();
         applicationController2 object2 = new applicationController2();
+
+        try {
+            x = new Scanner(new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\renewalDetails"));
+            //y = new Formatter("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\accounts");
+        }
+        catch (Exception e) {
+            System.out.println("could not find file");
+        }
+
+        String name = x.next();
+        String address = x.next();
+        String cellphoneNum = x.next();
+
+        x.close();
+
+        File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\graphs");
+        FileWriter fw = new FileWriter(file, true);
+        PrintWriter pw = new PrintWriter(fw);
+
+        pw.print(name);
+        pw.print(" ");
+        pw.print(address);
+        pw.print(" ");
+        pw.println(cellphoneNum);
+
+        pw.close();
 
         addEdge(object.name, object2.office);
         addEdge(object.address, object.name);

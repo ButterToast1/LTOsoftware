@@ -47,4 +47,8 @@ public class mainMenuController {
         window.setScene(paymentScene);
         window.show();
     }
+
+    public void exit(ActionEvent event) throws IOException{
+        System.exit(0);
+    }
 }

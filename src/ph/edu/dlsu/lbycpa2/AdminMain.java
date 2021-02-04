@@ -22,10 +22,11 @@ public class AdminMain {
         System.out.println("1. Check number of accounts in software");
         System.out.println("2. Print total accounts in software");
         System.out.println("3. Check most recent account registered");
+        System.out.println("4. print adjacency matrix list of graphs file");
         System.out.println("=====================================");
 
 
-        System.out.println("4. Exit program");
+        System.out.println("5. Exit program");
         choice();
     }
 
@@ -51,7 +52,7 @@ public class AdminMain {
                 openFile();
                 checkTop();
                 closeFile();
-            case 4:
+            case 5:
                 System.exit(0);
         }
     }

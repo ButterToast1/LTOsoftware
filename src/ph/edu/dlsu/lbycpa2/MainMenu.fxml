@@ -57,7 +57,7 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Exit Program">
+            <Button mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="140.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Exit Program">
                <VBox.margin>
                   <Insets left="30.0" top="20.0" />
                </VBox.margin>
