@@ -7,45 +7,31 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.paymentController">
    <children>
-      <Button layoutX="71.0" layoutY="315.0" mnemonicParsing="false" onAction="#poptomainMenu" text="Back" />
-      <Button layoutX="479.0" layoutY="315.0" mnemonicParsing="false" text="Checkout" />
-      <Label layoutX="265.0" layoutY="276.0" prefHeight="17.0" prefWidth="41.0" text="Total:">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
-      <Label layoutX="62.0" layoutY="29.0" text="Payments">
+      <Button layoutX="60.0" layoutY="315.0" mnemonicParsing="false" onAction="#poptomainMenu" text="Back" />
+      <Button layoutX="479.0" layoutY="315.0" mnemonicParsing="false" onAction="#checkout" text="Checkout" />
+      <Label layoutX="62.0" layoutY="29.0" text="Violations">
          <font>
             <Font size="35.0" />
          </font></Label>
-      <Line endX="372.0" layoutX="171.0" layoutY="303.0" startX="-100.0" />
-      <Label layoutX="60.0" layoutY="81.0" text="Items">
+      <Line endX="372.0" layoutX="171.0" layoutY="303.0" startX="-111.33332824707031" />
+      <Label layoutX="60.0" layoutY="81.0" text="History">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="232.0" layoutY="81.0" text="Price">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="392.0" layoutY="81.0" text="Shopping Cart">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <ListView fx:id="list_items" layoutX="60.0" layoutY="116.0" prefHeight="151.0" prefWidth="153.0" />
+      <ListView fx:id="list_items" layoutX="60.0" layoutY="116.0" prefHeight="151.0" prefWidth="485.0" />
       <ListView layoutX="-160.0" layoutY="149.0" prefHeight="35.0" prefWidth="127.0" />
-      <ListView fx:id="cartList" layoutX="392.0" layoutY="116.0" prefHeight="151.0" prefWidth="153.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="400.0" layoutX="-171.0" layoutY="-1.0" stroke="DODGERBLUE" strokeType="INSIDE" width="200.0" />
       <Label layoutX="232.0" layoutY="319.0" />
-      <TextField fx:id="showPrice" layoutX="236.0" layoutY="116.0" prefHeight="25.0" prefWidth="127.0" />
-      <Button layoutX="239.0" layoutY="315.0" mnemonicParsing="false" onAction="#addItems" text="Add" />
-      <Button layoutX="286.0" layoutY="315.0" mnemonicParsing="false" onAction="#removeItems" text="Remove" />
+      <Button layoutX="177.0" layoutY="315.0" mnemonicParsing="false" onAction="#addItems" text="Add" />
+      <Button layoutX="396.0" layoutY="315.0" mnemonicParsing="false" onAction="#removeItems" text="Remove" />
       <Label fx:id="displayItem" layoutX="237.0" layoutY="154.0" text=".">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label fx:id="total" layoutX="321.0" layoutY="278.0" text="X" />
+      <Button layoutX="418.0" layoutY="86.0" mnemonicParsing="false" onAction="#paymentSort" text="Sort A-Z" />
+      <Button layoutX="482.0" layoutY="86.0" mnemonicParsing="false" onAction="#paymentSort2" text="Sort Z-A" />
+      <TextField fx:id="showPrice" layoutX="215.0" layoutY="315.0" />
    </children>
 </AnchorPane>

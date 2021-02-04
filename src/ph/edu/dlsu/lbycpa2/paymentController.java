@@ -18,7 +18,7 @@ import javafx.scene.control.TextField;
 import java.awt.*;
 import java.io.IOException;
 import javafx.event.ActionEvent;
-
+import java.util.Stack;
 import javax.swing.*;
 
 
@@ -28,7 +28,6 @@ public class paymentController {
         //public ListView list_items;
         @FXML private ListView <String> list_items,cartList;
         @FXML private TextField showPrice;
-
         ObservableList <String> paymentList,newcartlist;
 
         @FXML
@@ -57,24 +56,48 @@ public class paymentController {
         public void addItems(ActionEvent event) {
                 int totalPrice = 1;
                 String item = showPrice.getText();
-                cartList.getItems().addAll(item);
-                totalPrice += 500;
+                list_items.getItems().addAll(item);
                 //int -> string -> label
 
-                String A = Integer.toString(totalPrice);
-                total.setText(A);
         }
 
         public void removeItems(ActionEvent event) {
-                int index = cartList.getSelectionModel().getSelectedIndex();
+                int index = list_items.getSelectionModel().getSelectedIndex();
                 if (index >= 0) {
-                        cartList.getItems().remove(index);
+                        list_items.getItems().remove(index);
                 }
         }
 
+        public void checkout(ActionEvent event) throws IOException{
+                Parent tableViewParent = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+                Scene mainMenuScene = new Scene(tableViewParent);
 
+                //This line gets the Stage information
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+                window.setScene(mainMenuScene);
+                window.show();
+        }
+
+        public void paymentSort(ActionEvent event) throws IOException{
+                list.sort(String.CASE_INSENSITIVE_ORDER);
+        }
+
+        public void paymentSort2(ActionEvent event) throws IOException{
+                list.sort(String.CASE_INSENSITIVE_ORDER.reversed());
+        }
         @FXML
-        ObservableList <String> list = FXCollections.observableArrayList("License Renewal","Registration Fee", "License Application","Late Fee");
+        ObservableList <String> list = FXCollections.observableArrayList("License Renewal Fee");
 
+        //"Registration Fee", "License Application","Late Fee","Illegal Parking","Beating the Red Light"
+        /*
+
+        List&lt;Movie&gt; movies = Arrays.asList(
+        new Movie("Lord of the rings", 8.8, true),
+        new Movie("Back to the future", 8.5, false),
+        new Movie("Carlito's way", 7.9, true),
+        new Movie("Pulp fiction", 8.9, false));
+        movies.sort(Comparator.comparing(Movie::getStarred).reversed().thenComparing(Comparator.comparing(Movie::getRating) .reversed()));
+        movies.forEach(System.out::println);*/
 
 }
