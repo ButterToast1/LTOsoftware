@@ -1,5 +1,6 @@
 package ph.edu.dlsu.lbycpa2;
 
+import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,6 +19,8 @@ import javafx.scene.control.TextField;
 import java.awt.*;
 import java.io.IOException;
 import javafx.event.ActionEvent;
+import javafx.util.Duration;
+
 import java.util.Stack;
 import javax.swing.*;
 
