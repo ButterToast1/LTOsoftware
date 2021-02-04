@@ -51,10 +51,6 @@ public class applicationController {
         //This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\renewalDetails");
-        FileWriter fw = new FileWriter(file, true);
-        PrintWriter pw = new PrintWriter(fw);
-
 
 
         window.setScene(tableViewScene);
@@ -86,7 +82,8 @@ public class applicationController {
             pw.print(" ");
             pw.print(address);
             pw.print(" ");
-            pw.println(cellphoneNum);
+            pw.print(cellphoneNum);
+            pw.print(" ");
             pw.close();
 
             window.setScene(tableViewScene);

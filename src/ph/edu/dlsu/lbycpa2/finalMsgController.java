@@ -24,7 +24,6 @@ public class finalMsgController {
 
         try {
             x = new Scanner(new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\renewalDetails"));
-            //y = new Formatter("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\accounts");
         }
         catch (Exception e) {
             System.out.println("could not find file");
@@ -33,6 +32,8 @@ public class finalMsgController {
         String name = x.next();
         String address = x.next();
         String cellphoneNum = x.next();
+        String region = x.next();
+        String office = x.next();
 
         x.close();
 
@@ -44,7 +45,11 @@ public class finalMsgController {
         pw.print(" ");
         pw.print(address);
         pw.print(" ");
-        pw.println(cellphoneNum);
+        pw.print(cellphoneNum);
+        pw.print(" ");
+        pw.print(region);
+        pw.print(" ");
+        pw.println(office);
 
         pw.close();
 
@@ -75,10 +80,6 @@ public class finalMsgController {
         }
     }
 
-    Set getNodes()
-    {
-        return adjList.keySet();
-    }
 
 
 

@@ -9,7 +9,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class applicationController2 {
 
@@ -46,12 +49,22 @@ public class applicationController2 {
         //This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+        File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\renewalDetails");
+        FileWriter fw = new FileWriter(file, true);
+        PrintWriter pw = new PrintWriter(fw);
+
         p1 = regionField.getText().trim().isEmpty();
         p2 = officeField.getText().trim().isEmpty();
 
         if (!p1 && !p2) {
             region = regionField.getText();
             office = officeField.getText();
+
+            pw.print(region);
+            pw.print(" ");
+            pw.print(office);
+
+            pw.close();
 
             window.setScene(tableViewScene);
             window.show();

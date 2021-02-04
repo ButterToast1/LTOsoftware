@@ -33,33 +33,33 @@
       </ImageView>
       <VBox layoutX="6.0" layoutY="137.0" prefHeight="544.0" prefWidth="201.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#changeScreenButtontoProfile" prefHeight="30.0" prefWidth="140.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Profile">
+            <Button mnemonicParsing="false" onAction="#changeScreenButtontoProfile" prefHeight="30.0" prefWidth="150.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Profile">
                <VBox.margin>
-                  <Insets left="30.0" top="20.0" />
+                  <Insets left="20.0" top="20.0" />
                </VBox.margin>
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#changeScreenButtontoRegistration" prefHeight="30.0" prefWidth="140.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Renew License">
+            <Button mnemonicParsing="false" onAction="#changeScreenButtontoRegistration" prefHeight="30.0" prefWidth="150.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Apply/Renew License">
                <VBox.margin>
-                  <Insets left="30.0" top="20.0" />
+                  <Insets left="20.0" top="20.0" />
                </VBox.margin>
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#changeScreenButtontoPayment" prefHeight="30.0" prefWidth="140.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Review Payments">
+            <Button mnemonicParsing="false" onAction="#changeScreenButtontoPayment" prefHeight="30.0" prefWidth="150.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Review Payments">
                <VBox.margin>
-                  <Insets left="30.0" top="20.0" />
+                  <Insets left="20.0" top="20.0" />
                </VBox.margin>
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="140.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Exit Program">
+            <Button mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="150.0" styleClass="menu-button" stylesheets="@loginStyle.css" text="Exit Program">
                <VBox.margin>
-                  <Insets left="30.0" top="20.0" />
+                  <Insets left="20.0" top="20.0" />
                </VBox.margin>
                <font>
                   <Font size="15.0" />

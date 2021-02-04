@@ -3,11 +3,12 @@ package ph.edu.dlsu.lbycpa2;
 import javafx.fxml.FXML;
 
 import java.io.File;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class AdminMain {
 
+    static int n = 0;
+    static HashMap<String, LinkedList<String>> adjList = new HashMap<>();
     private static Scanner x;
 
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class AdminMain {
         System.out.println("1. Check number of accounts in software");
         System.out.println("2. Print total accounts in software");
         System.out.println("3. Check most recent account registered");
-        System.out.println("4. print adjacency matrix list of graphs file");
+        System.out.println("4. print hash map list of graphs file");
         System.out.println("=====================================");
 
 
@@ -52,6 +53,8 @@ public class AdminMain {
                 openFile();
                 checkTop();
                 closeFile();
+            case 4:
+                hashMap();
             case 5:
                 System.exit(0);
         }
@@ -121,4 +124,60 @@ public class AdminMain {
         x.close();
     }
 
+    static void addEdge(String src, String dest)
+    {
+        if (!adjList.containsKey(src))
+        {
+            LinkedList<String> nodes = new LinkedList<>();
+            nodes.add(dest);
+            adjList.put(src, nodes);
+            n++;
+        }
+        else
+        {
+            LinkedList<String> nodes = adjList.get(src);
+            nodes.add(dest);
+            adjList.put(src, nodes);
+        }
+    }
+
+    static Set getNodes()
+    {
+        return adjList.keySet();
+    }
+
+
+    static void displayGraph()
+    {
+        for (Map.Entry m : adjList.entrySet())
+        {
+            System.out.println(m.getKey() + " ==> " + m.getValue());
+        }
+    }
+
+
+    public static void hashMap() {
+        try {
+            x = new Scanner(new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\graphs"));
+        }
+        catch (Exception e) {
+            System.out.println("could not find file");
+        }
+
+        String name = x.next();
+        String email = x.next();
+        String celNum = x.next();
+        String region = x.next();
+        String office = x.next();
+
+        x.close();
+        addEdge(email, name);
+        addEdge(celNum, name);
+        addEdge(name, office);
+        addEdge(office, region);
+
+        System.out.println("Vertices = " + getNodes());
+        displayGraph();
+
+    }
 }
