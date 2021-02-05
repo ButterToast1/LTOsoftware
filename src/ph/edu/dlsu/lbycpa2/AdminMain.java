@@ -24,10 +24,10 @@ public class AdminMain {
         System.out.println("2. Print total accounts in software");
         System.out.println("3. Check most recent account registered");
         System.out.println("4. print hash map list of graphs file");
+        System.out.println("5. Exit program");
         System.out.println("=====================================");
 
 
-        System.out.println("5. Exit program");
         choice();
     }
 
@@ -78,7 +78,6 @@ public class AdminMain {
             String d = x.next();
             String e = x.next();
 
-            System.out.printf("%s %s %s %s %s\n", a, b, c, d, e);
             stk.push(a);
         }
 
