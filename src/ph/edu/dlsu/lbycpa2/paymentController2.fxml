@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="149.0" prefWidth="227.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.payment2">
+   <children>
+      <Button layoutX="36.0" layoutY="91.0" mnemonicParsing="false" text="Cancel" />
+      <Button layoutX="139.0" layoutY="91.0" mnemonicParsing="false" text="Pay" />
+      <Label layoutX="59.0" layoutY="46.0" text="Your Total: " />
+      <Label fx:id="paymentController_total" layoutX="120.0" layoutY="46.0" />
+   </children>
+</AnchorPane>

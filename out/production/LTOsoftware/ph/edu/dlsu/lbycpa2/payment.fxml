@@ -23,21 +23,25 @@
       <ListView layoutX="-160.0" layoutY="149.0" prefHeight="35.0" prefWidth="127.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="400.0" layoutX="-171.0" layoutY="-1.0" stroke="DODGERBLUE" strokeType="INSIDE" width="200.0" />
       <Label layoutX="232.0" layoutY="319.0" />
-      <Button layoutX="177.0" layoutY="315.0" mnemonicParsing="false" onAction="#addItems" text="Add" />
-      <Button layoutX="396.0" layoutY="315.0" mnemonicParsing="false" onAction="#removeItems" text="Remove" />
+      <Button layoutX="101.0" layoutY="315.0" mnemonicParsing="false" onAction="#addItems" text="Add" />
+      <Button layoutX="251.0" layoutY="315.0" mnemonicParsing="false" onAction="#removeItems" text="Remove" />
       <Label fx:id="displayItem" layoutX="237.0" layoutY="154.0" text=".">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
       <Button layoutX="190.0" layoutY="86.0" mnemonicParsing="false" onAction="#paymentSort" text="Sort A-Z" />
-      <Button layoutX="259.0" layoutY="86.0" mnemonicParsing="false" onAction="#paymentSort2" text="Sort Z-A" />
-      <TextField fx:id="showPrice" layoutX="215.0" layoutY="315.0" />
-      <ListView layoutX="326.0" layoutY="116.0" prefHeight="151.0" prefWidth="218.0" />
-      <Label layoutX="326.0" layoutY="81.0" text="Price">
+      <Button layoutX="251.0" layoutY="86.0" mnemonicParsing="false" onAction="#paymentSort2" text="Sort Z-A" />
+      <TextField fx:id="showPrice" layoutX="139.0" layoutY="315.0" prefHeight="25.0" prefWidth="111.0" />
+      <ListView fx:id="list_items2" layoutX="326.0" layoutY="116.0" prefHeight="151.0" prefWidth="218.0" />
+      <Label layoutX="326.0" layoutY="81.0" text="Tab">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
+      <Button layoutX="348.0" layoutY="315.0" mnemonicParsing="false" onAction="#addItemsToTab" text="AddToTab" />
+      <Button layoutX="419.0" layoutY="315.0" mnemonicParsing="false" onAction="#removeItemsFromTab" text="Remove" />
+      <Label layoutX="326.0" layoutY="276.0" text="Total: " />
+      <Label fx:id="new_total" layoutX="369.0" layoutY="276.0" />
    </children>
 </AnchorPane>
