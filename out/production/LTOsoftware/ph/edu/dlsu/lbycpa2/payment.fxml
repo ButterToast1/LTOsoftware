@@ -19,7 +19,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <ListView fx:id="list_items" layoutX="60.0" layoutY="116.0" prefHeight="151.0" prefWidth="485.0" />
+      <ListView fx:id="list_items" layoutX="60.0" layoutY="116.0" prefHeight="151.0" prefWidth="260.0" />
       <ListView layoutX="-160.0" layoutY="149.0" prefHeight="35.0" prefWidth="127.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="400.0" layoutX="-171.0" layoutY="-1.0" stroke="DODGERBLUE" strokeType="INSIDE" width="200.0" />
       <Label layoutX="232.0" layoutY="319.0" />
@@ -30,8 +30,14 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Button layoutX="418.0" layoutY="86.0" mnemonicParsing="false" onAction="#paymentSort" text="Sort A-Z" />
-      <Button layoutX="482.0" layoutY="86.0" mnemonicParsing="false" onAction="#paymentSort2" text="Sort Z-A" />
+      <Button layoutX="190.0" layoutY="86.0" mnemonicParsing="false" onAction="#paymentSort" text="Sort A-Z" />
+      <Button layoutX="259.0" layoutY="86.0" mnemonicParsing="false" onAction="#paymentSort2" text="Sort Z-A" />
       <TextField fx:id="showPrice" layoutX="215.0" layoutY="315.0" />
+      <ListView layoutX="326.0" layoutY="116.0" prefHeight="151.0" prefWidth="218.0" />
+      <Label layoutX="326.0" layoutY="81.0" text="Price">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

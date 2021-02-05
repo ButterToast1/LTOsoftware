@@ -25,7 +25,7 @@ import java.util.Stack;
 import javax.swing.*;
 
 
-public class paymentController {
+public class paymentController{
 
         public Label total;
         //public ListView list_items;
@@ -35,6 +35,7 @@ public class paymentController {
 
         @FXML
         private void initialize() {
+
                 paymentList = FXCollections.observableArrayList();
                 newcartlist = FXCollections.observableArrayList();
                 list_items.setItems(list);
@@ -90,10 +91,18 @@ public class paymentController {
                 list.sort(String.CASE_INSENSITIVE_ORDER.reversed());
         }
         @FXML
-        ObservableList <String> list = FXCollections.observableArrayList("License Renewal Fee");
-
+        ObservableList list = FXCollections.observableArrayList("License Renewal Fee - 985","Driving w/o License - 3000",
+                "No Seatbelt - 1000",
+                "Driving under the Influence - 5000",
+                "Careless Driving - 1000",
+                "Driving w/o Registration - 10000",
+                "Illegally Modified Car - 5000",
+                "Running a Right-Hand Car - 50000",
+                "Missing Car Parts - 5000" ,
+                "Illegal Plate - 5000",
+                "Smoke Belching - 6000");
         //"Registration Fee", "License Application","Late Fee","Illegal Parking","Beating the Red Light"
-        /*
+        /*,
 
         List&lt;Movie&gt; movies = Arrays.asList(
         new Movie("Lord of the rings", 8.8, true),
