@@ -51,7 +51,7 @@ public class signInController {
 
     public void openFile() {
         try {
-            x = new Scanner(new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\accounts"));
+            x = new Scanner(new File("C:\\Users\\Asus\\IdeaProjects\\LTOsoftware\\src\\assets\\accounts"));
         }
         catch (Exception e) {
             System.out.println("could not find file");

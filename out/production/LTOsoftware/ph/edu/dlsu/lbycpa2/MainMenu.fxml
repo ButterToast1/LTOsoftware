@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="680.0" fitWidth="980.0" layoutY="129.0" opacity="0.86" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="file:/C:/Users/User/IdeaProjects/LTOsoftware/src/assets/city.jpg" />
+            <Image url="file:/C:/Users/Asus/IdeaProjects/LTOsoftware/src/assets/city.jpg" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DARKBLUE" height="189.0" layoutY="-52.0" stroke="#1e90e1" strokeType="INSIDE" width="980.0" />
