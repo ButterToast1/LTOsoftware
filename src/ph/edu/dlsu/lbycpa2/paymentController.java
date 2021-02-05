@@ -98,9 +98,8 @@ public class paymentController{
                 //priceList to priceList2
                 //NewPrice = NewPrice + priceList.priceList2();
                 //put price accumulation here
-                for (int i=0; i < priceList2.size(); i++) {
-                        System.out.println(priceList2.get(i));
-                }
+                //Integer.parseInt()
+
                 //int-string-int
                 new_total.setText(String.valueOf(NewPrice));
         }
