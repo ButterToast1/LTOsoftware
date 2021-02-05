@@ -13,6 +13,13 @@ import java.io.IOException;
 public class finalMsgController {
 
     private Scanner x;
+
+    public String name;
+    public String address;
+    public String cellphoneNum;
+    public String region;
+    public String office;
+
     int n = 0;
 
     HashMap<String,LinkedList<String>> adjList = new HashMap<>();
@@ -29,11 +36,11 @@ public class finalMsgController {
             System.out.println("could not find file");
         }
 
-        String name = x.next();
-        String address = x.next();
-        String cellphoneNum = x.next();
-        String region = x.next();
-        String office = x.next();
+        name = x.next();
+        address = x.next();
+        cellphoneNum = x.next();
+        region = x.next();
+        office = x.next();
 
         x.close();
 

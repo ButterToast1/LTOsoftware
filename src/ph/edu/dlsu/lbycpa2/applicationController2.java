@@ -1,6 +1,5 @@
 package ph.edu.dlsu.lbycpa2;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -43,12 +42,6 @@ public class applicationController2 {
     }
 
     public void popToNextApp(javafx.event.ActionEvent event) throws IOException {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("finalMsg.fxml"));
-        Scene tableViewScene = new Scene(tableViewParent);
-
-        //This line gets the Stage information
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
         File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\renewalDetails");
         FileWriter fw = new FileWriter(file, true);
         PrintWriter pw = new PrintWriter(fw);
@@ -57,13 +50,20 @@ public class applicationController2 {
         p2 = officeField.getText().trim().isEmpty();
 
         if (!p1 && !p2) {
-            region = regionField.getText() +" ";
+            region = regionField.getText() + " ";
             office = officeField.getText();
 
+            System.out.printf("%s%s", region, office);
             pw.print(region);
-            pw.println(office);
+            pw.print(office);
 
             pw.close();
+
+            Parent tableViewParent = FXMLLoader.load(getClass().getResource("finalMsg.fxml"));
+            Scene tableViewScene = new Scene(tableViewParent);
+
+            //This line gets the Stage information
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
             window.setScene(tableViewScene);
             window.show();

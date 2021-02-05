@@ -82,7 +82,6 @@ public class loginController implements Initializable {
 
             }catch(IOException ex){
 
-
             }
         });
     }
