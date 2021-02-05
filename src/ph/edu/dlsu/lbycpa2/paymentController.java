@@ -22,14 +22,15 @@ import javafx.event.ActionEvent;
 import javafx.util.Duration;
 import java.util.Stack;
 import javax.swing.*;
+import java.util.ArrayList;
 
 
 public class paymentController{
 
         public Label total;
-        public int NewPrice;
+        public int NewPrice = 0;
         //public ListView list_items;
-        @FXML private ListView <String> list_items,cartList,list_items2;
+        @FXML private ListView <String> list_items,cartList,list_items2,price_ListView,price_ListView_fake;
         @FXML private TextField showPrice;
         @FXML private Label new_total;
         ObservableList <String> paymentList,newcartlist;
@@ -40,7 +41,7 @@ public class paymentController{
                 paymentList = FXCollections.observableArrayList();
                 newcartlist = FXCollections.observableArrayList();
                 list_items.setItems(list);
-
+                price_ListView_fake.setItems(priceList);
 
         }
 
@@ -91,12 +92,16 @@ public class paymentController{
 
         public void addItemsToTab(ActionEvent event){
                 int index = list_items.getSelectionModel().getSelectedIndex();
-                int NewPrice = 0;
                 list_items2.getItems().addAll(list_items.getItems().remove(index));
-
+                price_ListView.getItems().addAll(price_ListView_fake.getItems().remove(index));
+                //price_ListView
                 //priceList to priceList2
                 //NewPrice = NewPrice + priceList.priceList2();
                 //put price accumulation here
+                for (int i=0; i < priceList2.size(); i++) {
+                        System.out.println(priceList2.get(i));
+                }
+                //int-string-int
                 new_total.setText(String.valueOf(NewPrice));
         }
 
@@ -104,6 +109,7 @@ public class paymentController{
                 int index = list_items2.getSelectionModel().getSelectedIndex();
                 if (index >= 0) {
                         list_items.getItems().addAll(list_items2.getItems().remove(index));
+                        price_ListView_fake.getItems().addAll(price_ListView.getItems().remove(index));
                 }
         }
 
@@ -127,7 +133,7 @@ public class paymentController{
                 "Illegal Plate - 5000",
                 "Smoke Belching - 6000");
         ObservableList list2 = FXCollections.observableArrayList();
-        ObservableList priceList = FXCollections.observableArrayList(3000, 1000,5000,1000,10000,5000,50000,5000,5000,6000);
+        ObservableList priceList = FXCollections.observableArrayList("985","3000", "1000","5000","1000","10000","5000","50000","5000","5000","6000");
         ObservableList priceList2 = FXCollections.observableArrayList();
         //"Registration Fee", "License Application","Late Fee","Illegal Parking","Beating the Red Light"
         /*,
