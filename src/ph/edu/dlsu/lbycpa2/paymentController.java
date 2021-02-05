@@ -38,7 +38,7 @@ public class paymentController {
                 paymentList = FXCollections.observableArrayList();
                 newcartlist = FXCollections.observableArrayList();
                 list_items.setItems(list);
-                cartList.setItems(newcartlist);
+                //cartList.setItems(newcartlist);
                 //paymentList.add("Registration Fee");
                 //paymentList.add("License Application");
                 //paymentList.add("License Renewal");
