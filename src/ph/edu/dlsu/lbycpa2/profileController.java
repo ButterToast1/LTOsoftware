@@ -10,16 +10,17 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-import java.awt.*;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import java.io.File;
 
-public class profileController {
+public class profileController extends signInController {
 
+    public String signInEmail;
     public TextField emailTextField;
     public TextField pictureLabel;
     public Label name;
@@ -43,7 +44,26 @@ public class profileController {
     public String loc;
     public String exp;
     public String email;
+    public String profileEmail;
+
+    public Label Label1;
+    public Label Label2;
+    public Label Label3;
+    public Label Label4;
+    public Label Label5;
+    public Label Label6;
+    public Label Label7;
+    public Label Label8;
+    public Label Label9;
+    public Label Label10;
+    public Label Label11;
+    public Label Label12;
+    public Label Label13;
+    public Label Label14;
+    public Label Label15;
+
     private Scanner y;
+    private Scanner x;
 
     @FXML
     public void push(ActionEvent event) throws IOException {
@@ -56,14 +76,11 @@ public class profileController {
         window.setScene(mainMenuScene);
         window.show();
 
-        openFile();
-        readFile();
-        closeFile();
     }
 
     public void changePicture(ActionEvent event) {
         if (!pictureLabel.getText().trim().isEmpty()) {
-            pictureView.setImage(new Image("file:/C:/Users/Asus/IdeaProjects/LTOsoftware/src/assets/" + pictureLabel.getText()));
+            pictureView.setImage(new Image("file:/C:/Users/User/IdeaProjects/LTOsoftware/src/assets/" + pictureLabel.getText()));
             statusLabel.setText("picture changed to " + pictureLabel.getText());
         }
         statusLabel.setVisible(true);
@@ -79,19 +96,37 @@ public class profileController {
 
     }
 
-    public void openFile() {
+    @FXML
+    public void initialize() throws IOException {
         try {
-            y = new Scanner(new File("C:\\Users\\Asus\\IdeaProjects\\LTOsoftware\\src\\assets\\bioData"));
+            y = new Scanner(new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\bioData"));
         } catch (Exception e) {
             System.out.println("could not find file");
         }
+
+        try {
+            x = new Scanner(new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\profile"));
+        } catch (Exception e) {
+            System.out.println("could not find file");
+        }
+
+
+
+        readFile();
     }
-    public void readFile(){
+
+    @FXML
+    public String readFile() throws IOException {
+        File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\profile");
+        FileWriter fw = new FileWriter(file, true);
+        PrintWriter pw = new PrintWriter(fw);
+
+        email = y.next();
         licenseType= y.next();
-        String firstName = y.next();
-        String middleInitial = y.next();
-        String lastName = y.next();
-        Fullname = firstName + middleInitial + lastName;
+        String profilefirstName = y.next();
+        String profilemiddleInitial = y.next();
+        String profilelastName = y.next();
+        Fullname = profilefirstName + profilemiddleInitial + profilelastName;
         gender=y.next();
         birth=y.next();
         weight=y.next();
@@ -104,20 +139,58 @@ public class profileController {
         restriction=y.next();
         condition=y.next();
 
-        while(y.hasNext() && !email.equals(emailTextField.getText())) {
+        signInController signInObj = new signInController();
 
-            email = y.next();
-            password = y.next();
+        signInEmail = x.next();
 
-            firstName = y.next();
-            middleInitial = y.next();
-            lastName = y.next();
-            Fullname = firstName + " " + middleInitial + " " + lastName;
+        while(x.hasNext()) {
 
-            System.out.printf("%s %s %s\n", licenseType, Fullname,gender);
+            signInEmail = x.next();
+            System.out.println(signInEmail);
         }
 
+        System.out.println("The signInEmail is: " + signInEmail);
+            while(y.hasNext() && !email.equals(signInEmail)) {
+
+                email = y.next();
+                licenseType= y.next();
+                profilefirstName = y.next();
+                profilemiddleInitial = y.next();
+                profilelastName = y.next();
+                Fullname = profilefirstName + profilemiddleInitial + profilelastName;
+                gender=y.next();
+                birth=y.next();
+                weight=y.next();
+                height=y.next();
+                loc=y.next();
+                licenseNumber=y.next();
+                exp=y.next();
+                bloodType=y.next();
+                eyeColor=y.next();
+                restriction=y.next();
+                condition=y.next();
+
+                Label1.setText(licenseType);
+                Label2.setText(Fullname);
+                Label3.setText(gender);
+                Label4.setText(birth);
+                Label5.setText(weight);
+                Label6.setText(loc);
+                Label7.setText(licenseNumber);
+                Label8.setText(exp);
+                Label9.setText(bloodType);
+                Label10.setText(eyeColor);
+                Label11.setText(restriction);
+                Label12.setText(condition);
+                Label13.setText(email);
+            }
+
+        x.close();
+
+        y.close();
+
         System.out.println("success");
+        return profilefirstName;
     }
 
     public void closeFile() {

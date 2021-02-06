@@ -43,6 +43,6 @@
             <Image url="@../../../../assets/logo.png" />
          </image>
       </ImageView>
-      <Button layoutX="939.0" layoutY="648.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="16.0" textFill="#fffcfc" />
+      <Button layoutX="939.0" layoutY="648.0" mnemonicParsing="false" onAction="#bypass" prefHeight="17.0" prefWidth="16.0" textFill="#fffcfc" />
    </children>
 </AnchorPane>

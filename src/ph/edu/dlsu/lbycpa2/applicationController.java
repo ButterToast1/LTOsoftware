@@ -63,7 +63,7 @@ public class applicationController {
         //This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        File file = new File("C:\\Users\\Asus\\IdeaProjects\\LTOsoftware\\src\\assets\\renewalDetails");
+        File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\renewalDetails");
         FileWriter fw = new FileWriter(file, true);
         PrintWriter pw = new PrintWriter(fw);
 

@@ -11,7 +11,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class signInController {
@@ -38,6 +40,8 @@ public class signInController {
         readFile();
         closeFile();
         if (emailTextField.getText().equals(email) && passwordTextField.getText().equals(password)){
+            profileController profileName = new profileController();
+
             window.setScene(mainMenuScene);
             window.show();
             System.out.println("variable emailTextField is: " + email + " while password is: "+ password);
@@ -58,7 +62,11 @@ public class signInController {
         }
     }
 
-    public void readFile() {
+    public String readFile() throws IOException{
+        File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\profile");
+        FileWriter fw = new FileWriter(file, true);
+        PrintWriter pw = new PrintWriter(fw);
+
 
         email = x.next();
         password = x.next();
@@ -82,6 +90,10 @@ public class signInController {
         }
 
         System.out.println("success");
+        pw.println(email);
+        pw.close();
+
+        return email;
     }
 
     public void closeFile() {
