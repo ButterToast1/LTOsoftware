@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="480.0" styleClass="blue-panel" stylesheets="@loginStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ph.edu.dlsu.lbycpa2.mainMenuController">
+   <children>
+      <Label text="Personal Fields (for setting of profile account)" textFill="#2196f3">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="20.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="email" promptText="Email" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="prof" promptText="Professional/Nonprofessional/N/A" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="fName" promptText="first name" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="mName" promptText="middle Initial" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="lName" promptText="Last Name" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="gender" promptText="Gender" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="dateOfBirth" promptText="Date of Birth mo/dy/yr" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="weight" promptText="Weight" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="height" promptText="Height" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="province" promptText="Province" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="licenseNum" promptText="License Number xxx-xx-xxxxxx" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="expDate" promptText="Expiration Date mo/dy/yr" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="bloodType" promptText="Blood Type" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="eyeColor" promptText="Eye Color" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="restrictions" promptText="Restrictions" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" stylesheets="@loginStyle.css">
+         <children>
+            <TextField fx:id="condOfBody" promptText="Conditions of Body (PWD, blind, etc.)" styleClass="tf_box" stylesheets="@loginStyle.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#print" prefHeight="38.0" prefWidth="451.0" styleClass="blue-btn" stylesheets="@loginStyle.css" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

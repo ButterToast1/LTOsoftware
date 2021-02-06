@@ -67,6 +67,9 @@ public class signInController {
         FileWriter fw = new FileWriter(file, true);
         PrintWriter pw = new PrintWriter(fw);
 
+        File file2 = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\conditions");
+        FileWriter fw2 = new FileWriter(file2, true);
+        PrintWriter pw2 = new PrintWriter(fw2);
 
         email = x.next();
         password = x.next();
@@ -86,12 +89,13 @@ public class signInController {
             lastName = x.next();
             fullName = firstName + " " + middleInitial + " " + lastName;
 
-            System.out.printf("%s %s %s\n", email, password, fullName);
         }
 
-        System.out.println("success");
         pw.println(email);
         pw.close();
+
+        pw2.println("false");
+        pw2.close();
 
         return email;
     }

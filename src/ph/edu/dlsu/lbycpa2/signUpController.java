@@ -16,7 +16,6 @@ import java.lang.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Formatter;
 import java.util.Scanner;
 
 
@@ -32,6 +31,8 @@ public class signUpController {
     public String password;
     private Scanner x;
 
+    public int n;
+
     @FXML
     public void push(ActionEvent event) throws IOException {
 
@@ -41,6 +42,9 @@ public class signUpController {
         //This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+        File file = new File("C:\\Users\\User\\IdeaProjects\\LTOsoftware\\src\\assets\\conditions");
+        FileWriter fw = new FileWriter(file, true);
+        PrintWriter pw = new PrintWriter(fw);
 
         openFile();
         writeFile();
@@ -48,14 +52,20 @@ public class signUpController {
         closeFile();
 
         if (emailTextField.getText().equals(email) && passwordTextField.getText().equals(password)){
+            pw.println("true");
+            pw.close();
+
             window.setScene(mainMenuScene);
             window.show();
+
         }
 
         else {
             statusLabel.setVisible(true);
             statusLabel.setText("Incorrect username or password.");
+
         }
+
     }
 
     public void openFile() {
@@ -79,7 +89,6 @@ public class signUpController {
         password = passwordTextField.getText() + " ";
         fullName = nameTextField.getText();
 
-        System.out.printf("%s%s%s",  email, password, fullName);
 
         pw.print(email);
         pw.print(password);
@@ -108,10 +117,8 @@ public class signUpController {
             lastName = x.next();
             fullName = firstName + " " + middleInitial + " " + lastName;
 
-            System.out.printf("%s %s %s\n", email, password, fullName);
         }
 
-        System.out.println("success");
     }
 
 
@@ -119,5 +126,9 @@ public class signUpController {
     public void closeFile() {
         x.close();
     }
+
+
+
+
 
 }

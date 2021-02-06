@@ -139,7 +139,20 @@ public class profileController extends signInController {
         restriction=y.next();
         condition=y.next();
 
-        signInController signInObj = new signInController();
+        Label1.setText(licenseType);
+        Label2.setText(Fullname);
+        Label3.setText(gender);
+        Label4.setText(birth);
+        Label5.setText(weight);
+        Label6.setText(loc);
+        Label7.setText(licenseNumber);
+        Label8.setText(exp);
+        Label9.setText(bloodType);
+        Label10.setText(eyeColor);
+        Label11.setText(restriction);
+        Label12.setText(condition);
+        Label13.setText(email);
+
 
         signInEmail = x.next();
 
